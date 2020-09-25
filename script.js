@@ -1,49 +1,46 @@
 $(document).ready(function () {
 
 
+    colorCode()
 
 
     var currentDate = moment().format('dddd MMMM Do');
     console.log(currentDate)
     $("#currentDay").text(currentDate)
 
-    currentHour = parseInt(moment().format("H"));
+    var currentHour = parseInt(moment().format("H"));
     console.log(currentHour)
 
-    calendarHour = parseInt($(".hour").data("number"))
-    console.log(calendarHour)
+    // var calendarHour = parseInt($(".hour").data("number"))
+    // console.log(calendarHour)
 
+    // var allHours = $(".hour");
+    // for (var index = 0; index < allHours.length; index++) {
+    //     console.log(allHours)
 
-
-    // array.forEach(getCalendarHour) {
-
-    //     function getCalendarHour() {
-    //         parseInt($(".hour").data("number"))
-    //         console.log(calendarHour)
-    //     }
-        
-    // });
-
-    // if (currentHour = calendarHour) {
-    //     $(".description").addClass("present");
     // }
-    // else if (currentHour > calendarHour) {
-    //     $(".description").addClass("past");
-    // }
-    // else if (currentHour < calendarHour){
-    //     $(".description").addClass("future");
-    // };
 
-    if (currentHour = calendarHour) {
-        $(".description").addClass("present");
-    }
-    else if (currentHour > calendarHour) {
-        $(".description").addClass("past");
-    }
-    else if (currentHour < calendarHour) {
-        $(".description").addClass("future");
-    };
+    var calendarHour = $(".hour").each(function (index, element) {
+        console.log($(this).data("number"))
+    });
 
+    // var allHoursString = JSON.stringify(allHours)
+
+
+    function colorCode() {
+        if (currentHour === calendarHour) {
+            $(".description").addClass("present");
+            console.log("present");
+        }
+        else if (currentHour > calendarHour) {
+            $(".description").addClass("past");
+            console.log("past");
+        }
+        else if (currentHour < calendarHour) {
+            $(".description").addClass("future");
+            console.log("future");
+        };
+    }
 
     // inputEvent = $("#nineam.").text
     // // console.log(inputEvent)
@@ -52,7 +49,26 @@ $(document).ready(function () {
     //     console.log(inputEvent);
     // });
 
-    // localStorage.setItem($(".description").text, JSON.stringify())
+    var savedEvent = $("#nineamtext").text
+    var savedEventString = JSON.stringify(savedEvent);
 
-    // var savedEvent = 
+    $("#nineambtn").click(function () {
+        localStorage.setItem("savedEvent", savedEventString)
+
+    });
+    var retrievedEvent = localStorage.getItem("savedEvent")
+    retrievedEvent = JSON.parse(retrievedEvent);
+    $("#nineamtext").text = retrievedEvent;
+    console.log(retrievedEvent);
+
+
 });
+
+// var userString = JSON.stringify(user);
+// console.log(user);
+// localStorage.setItem("user", userString);
+
+// // get most recent submission
+// var lastUser = localStorage.getItem("user");
+
+// lastUser = JSON.parse(lastUser);
