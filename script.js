@@ -23,7 +23,7 @@ $(document).ready(function () {
         // console.log(element)
         colorCode($(element));
         // console.log($(this).data("number"))
-        
+
     });
 
     // var allHoursString = JSON.stringify(allHours)
@@ -55,18 +55,114 @@ $(document).ready(function () {
     //     console.log(inputEvent);
     // });
 
-    var savedEvent = $("#nineamtext").val()
-    var savedEventString = JSON.stringify(savedEvent);
 
+        // Save 9am
     $("#nineambtn").click(function () {
-        localStorage.setItem("savedEvent", savedEventString)
-
+        var savedEventnineam = $("#nineamtext").val()
+        var savedEventnineamString = JSON.stringify(savedEventnineam);
+        localStorage.setItem("savedEventnineam", savedEventnineamString);
     });
-    var retrievedEvent = localStorage.getItem("savedEvent")
+
+    var retrievedEvent = localStorage.getItem("savedEventnineam");
     retrievedEvent = JSON.parse(retrievedEvent);
     $("#nineamtext").val(retrievedEvent);
     console.log(retrievedEvent);
 
+        // Save 10am
+    $("#tenambtn").click(function () {
+        var savedEventtenam = $("#tenamtext").val()
+        var savedEventtenamString = JSON.stringify(savedEventtenam);
+        localStorage.setItem("savedEventtenam", savedEventtenamString);
+    });
+
+    var retrievedEvent = localStorage.getItem("savedEventtenam");
+    retrievedEvent = JSON.parse(retrievedEvent);
+    $("#tenamtext").val(retrievedEvent);
+    console.log(retrievedEvent);
+    
+        // Save 11am
+    $("#elevenambtn").click(function () {
+        var savedEventelevenam = $("#elevenamtext").val()
+        var savedEventelevenamString = JSON.stringify(savedEventelevenam);
+        localStorage.setItem("savedEventelevenam", savedEventelevenamString);
+    });
+
+    var retrievedEvent = localStorage.getItem("savedEventelevenam");
+    retrievedEvent = JSON.parse(retrievedEvent);
+    $("#elevenamtext").val(retrievedEvent);
+    console.log(retrievedEvent);
+
+        // Save 12am
+    $("#noonbtn").click(function () {
+        var savedEventnoon = $("#noontext").val()
+        var savedEventnoonString = JSON.stringify(savedEventnoon);
+        localStorage.setItem("savedEventnoon", savedEventnoonString);
+    });
+
+    var retrievedEvent = localStorage.getItem("savedEventnoon");
+    retrievedEvent = JSON.parse(retrievedEvent);
+    $("#noontext").val(retrievedEvent);
+    console.log(retrievedEvent);
+
+        // Save 1pm
+    $("#onepmbtn").click(function () {
+        var savedEventonepm = $("#onepmtext").val()
+        var savedEventonepmString = JSON.stringify(savedEventonepm);
+        localStorage.setItem("savedEventonepm", savedEventonepmString);
+    });
+
+    var retrievedEvent = localStorage.getItem("savedEventonepm");
+    retrievedEvent = JSON.parse(retrievedEvent);
+    $("#onepmtext").val(retrievedEvent);
+    console.log(retrievedEvent);
+
+        // Save 2pm
+    $("#twopmbtn").click(function () {
+        var savedEventtwopm = $("#twopmtext").val()
+        var savedEventtwopmString = JSON.stringify(savedEventtwopm);
+        localStorage.setItem("savedEventtwopm", savedEventtwopmString);
+    });
+
+    var retrievedEvent = localStorage.getItem("savedEventtwopm");
+    retrievedEvent = JSON.parse(retrievedEvent);
+    $("#twopmtext").val(retrievedEvent);
+    console.log(retrievedEvent);
+
+        // Save 3pm
+    $("#threepmbtn").click(function () {
+        var savedEventthreepm = $("#threepmtext").val()
+        var savedEventthreepmString = JSON.stringify(savedEventthreepm);
+        localStorage.setItem("savedEventthreepm", savedEventthreepmString);
+    });
+
+    var retrievedEvent = localStorage.getItem("savedEventthreepm");
+    retrievedEvent = JSON.parse(retrievedEvent);
+    $("#threepmtext").val(retrievedEvent);
+    console.log(retrievedEvent);
+
+        // Save 4pm
+    $("#fourpmbtn").click(function () {
+        var savedEventfourpm = $("#fourpmtext").val()
+        var savedEventfourpmString = JSON.stringify(savedEventfourpm);
+        localStorage.setItem("savedEventfourpm", savedEventfourpmString);
+    });
+
+    var retrievedEvent = localStorage.getItem("savedEventfourpm");
+    retrievedEvent = JSON.parse(retrievedEvent);
+    $("#fourpmtext").val(retrievedEvent);
+    console.log(retrievedEvent);
+
+        // Save 5pm
+    $("#fivepmbtn").click(function () {
+        var savedEventfivepm = $("#fivepmtext").val()
+        var savedEventfivepmString = JSON.stringify(savedEventfivepm);
+        localStorage.setItem("savedEventfivepm", savedEventfivepmString);
+    });
+
+    var retrievedEvent = localStorage.getItem("savedEventfivepm");
+    retrievedEvent = JSON.parse(retrievedEvent);
+    $("#fivepmtext").val(retrievedEvent);
+    console.log(retrievedEvent);
 
 });
 
