@@ -1,9 +1,17 @@
 # week5-homework
 
-
-
-
 The Work Day Scheduler allows the user to keep track of the event happening within their day.
+
+Link to deployed application:
+https://grahamelphick.github.io/work-day-scheduler/
+
+
+Screenshots of deployed application:
+<img src="./screenshots/current-date.png" alt="current date">
+<img src="./screenshots/colour-coordination.png" alt="colour coordination- past, present and future">
+<img src="./screenshots/saved-events.png" alt="events saved locally after refreshing the page">
+
+
 
 When the user opens the planner, the current day is displayed at the top of the calendar.
 
