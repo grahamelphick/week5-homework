@@ -1,4 +1,4 @@
-# week5-homework
+# work-day-planner
 
 The Work Day Scheduler allows the user to keep track of the event happening within their day.
 
